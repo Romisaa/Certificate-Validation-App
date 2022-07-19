@@ -1,0 +1,98 @@
+<odoo>
+    <data>
+
+        <record id="view_certificate_app_tree" model="ir.ui.view">
+            <field name="name">certificate.app.tree</field>
+            <field name="model">certificate.app</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="serial_number" string="Serial Number"/>
+                    <field name="vehicle_type" string="Vehicle Type"/>
+                    <field name="certificate_type_id" string="Certificate Type"/>
+                    <field name="traffic_department_id" string="Traffic Departments"/>
+                    <field name="customers_id"/>
+                    <field name="car_brand_id"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+
+        </record>
+
+        <record id="view_certificate_app" model="ir.ui.view">
+            <field name="name">certificate.app.form</field>
+            <field name="model">certificate.app</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button type="object" name="print_report" string="Print" class="oe_highlight"
+                                attrs="{'invisible':[('is_printed','=',True)]}"/>
+
+                        <button type="object" name="reprint_report" string="Allow Reprint" class="oe_highlight"
+                                groups="validation_app_task.manager_group"/>
+
+                        <field name="is_printed" groups="validation_app_task.manager_group"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="vehicle_type"/>
+                                <field name="certificate_type_id"/>
+                                <field name="traffic_department_id"/>
+                                <field name="customers_id"/>
+                                <field name="customer_name" invisible="True"/>
+                                <field name="price"/>
+                            </group>
+
+                            <group>
+                                <field name="motor_number"/>
+                                <field name="chassis_number"/>
+                                <field name="car_model"/>
+                                <field name="car_brand_id"/>
+                                <field name="year_input"/>
+                                <field name="years_options"/>
+                                <!--                                <field name="communication_channel"/>-->
+                            </group>
+
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+
+        </record>
+
+        <record id="certificate_app_action" model="ir.actions.act_window">
+            <field name="name">Certificate App</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">certificate.app</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_certificate_root"
+                  name="Certificate App"
+                  sequence="0"/>
+
+        <menuitem id="menu_certificate_master"
+                  name="Certificate App"
+                  parent="menu_certificate_root"
+                  sequence="0"/>
+
+        <menuitem id="menu_certificate"
+                  name="Certificates"
+                  action="certificate_app_action"
+                  parent="menu_certificate_root"
+                  sequence="0"/>
+
+        <!--        <menuitem id="menu_hms_master"-->
+        <!--                  name="Patient Details"-->
+        <!--                  parent="menu_hms_root"-->
+        <!--                  sequence="0"/>-->
+
+        <!--        <menuitem id="menu_patient"-->
+        <!--                  name="Departments"-->
+        <!--                  action="hms_department_action"-->
+        <!--                  parent="menu_department_root"-->
+        <!--                  sequence="0"/>-->
+
+
+    </data>
+</odoo>

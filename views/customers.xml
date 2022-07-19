@@ -1,0 +1,45 @@
+<odoo>
+    <data>
+
+        <record id="view_customers_tree" model="ir.ui.view">
+            <field name="name">customers.tree</field>
+            <field name="model">customers.app</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="customer_name"/>
+                    <field name="customer_phone"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_customers" model="ir.ui.view">
+            <field name="name">customers.form</field>
+            <field name="model">customers.app</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="customer_name"/>
+                                <field name="customer_phone"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="customers_action" model="ir.actions.act_window">
+            <field name="name">Customers</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">customers.app</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_customers"
+                  name="Customers"
+                  action="customers_action"
+                  parent="menu_certificate_root"
+                  sequence="0"/>
+    </data>
+</odoo>

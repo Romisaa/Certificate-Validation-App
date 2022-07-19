@@ -1,0 +1,158 @@
+<odoo>
+    <data>
+        <template id="certificate_details">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-call="web.external_layout">
+                        <div class="page">
+
+                            <!--Start Title-->
+                            <div class="text-center">
+                                <h1 style="color:red;text-align:center;font-weight:bold;">شهادة صلاحيـة</h1>
+                            </div>
+                            <!--End Title-->
+
+                            <!--Start Greeting-->
+                            <div>
+                                <h4 width="50%" style="text-align:right;">
+                                    <span t-field="o.traffic_department_id"/>
+                                    /السيد مدير إدارة مديرية
+                                </h4>
+                            </div>
+                            <!--End Greeting-->
+
+                            <!--Start Date-->
+                            <div>
+                                <h4 width="50%" style="text-align:left;">
+                                    <span t-field="o.today"/>
+                                    تحريرًا في
+                                </h4>
+                            </div>
+                            <!--End Date-->
+                            <br/>
+                            <br/>
+                            <br/>
+                            <!--Start Greeting2-->
+                            <div class="text-center">
+                                <h4 style="text-align:center;font-weight:bold;">،،،،تحية طيبة وبعد</h4>
+                            </div>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <!--End Greeting2-->
+
+                            <!--Start Certificate Type Modification-->
+                            <div>
+                                <h4 width="50%" style="text-align:right;">
+                                    <span t-field="o.certificate_type_id"/>
+                                    /أتشرف بإفادة سيادتكم بأنه تم تعديل
+                                </h4>
+                            </div>
+                            <!--End Certificate Type Modification-->
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+                            <br/>
+
+                            <!--Start Details-->
+                            <div class="container">
+                                <div class="row">
+
+                                    <div class="col-3" style="text-align:right;">
+                                        <h4>
+                                            <span t-field="o.motor_number"/>
+                                        </h4>
+                                    </div>
+
+                                    <div class="col-3" style="text-align:right;">
+                                        <h4 style="font-weight:bold;">/محرك رقم</h4>
+                                    </div>
+
+                                    <div class="col-3" style="text-align:right;">
+                                        <h4>
+                                            <span t-field="o.chassis_number"/>
+                                        </h4>
+                                    </div>
+
+                                    <div class="col-3" style="text-align:right;">
+                                        <h4 style="font-weight:bold;">/شاسيه رقم</h4>
+                                    </div>
+
+
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-3" style="text-align:right;">
+                                        <h4>
+                                            <span t-field="o.car_brand_id"/>
+                                        </h4>
+                                    </div>
+
+                                    <div class="col-3" style="text-align:right;">
+                                        <h4 style="font-weight:bold;">/الماركة</h4>
+                                    </div>
+
+                                    <div class="col-3" style="text-align:right;">
+                                        <h4>
+                                            <span t-field="o.car_model"/>
+                                        </h4>
+                                    </div>
+
+                                    <div class="col-3" style="text-align:right;">
+                                        <h4 style="font-weight:bold;">/موديل</h4>
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-3" style="text-align:right;">
+
+                                    </div>
+
+                                    <div class="col-3" style="text-align:right;">
+                                    </div>
+
+                                    <div class="col-3" style="text-align:right;">
+                                        <h4>
+                                            <span t-field="o.customers_id"/>
+                                        </h4>
+                                    </div>
+
+                                    <div class="col-3" style="text-align:right;">
+                                        <h4 style="font-weight:bold;">/اسم المالك</h4>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <!--End Details-->
+                            <br/>
+
+                            <!--Start Paragraph-->
+                            <div>
+                                <h5 style="text-align:right;">
+                                    حيث أن المؤسسة معتمدة بالهيئة العامة للتنمية الصناعية ومصلحة الرقابة الصناعية
+                                    ومعتمدة بإدارات المرور ولها سجل تجاري صناعي وبطاقة ضريبية بهذه الصفة وقد تم فحص
+                                    التعديل والتركيب واللحامات والإصلاحات اللازمة طبقًا لأصول الصناعة ودون الإخلال
+                                    بالتصميم الأصلي ودون المساس بالأجزاء الجوهرية للسيارة وقد تم تجربة السيارة على الطرق
+                                    المصرية ووجد أنها متزنة وهذه شهادة منا بذلك لتقديمها للمرور والمالك مسؤول مسئولية
+                                    كاملة عن بيانات الشهادة فبرجاء التكرم والتفضل بالموافقة علي ترخيص السيارة.
+                                </h5>
+                            </div>
+                            <!--End Paragraph-->
+                                <br/><br/><br/><br/><br/><br/><br/><br/>
+                            <!--Start End Sentence-->
+                            <div class="text-center">
+                                <h4 style="text-align:center;font-weight:bold;">،،،،وتفضلوا بقبول فائق الاحترام والتقدير</h4>
+                            </div>
+                            <!--End End Sentence-->
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="report_details_id" model="ir.actions.report">
+            <field name="name">Certificate Details</field>
+            <field name="model">certificate.app</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">validation_app_task.certificate_details</field>
+            <field name="report_file">validation_app_task.certificate_details</field>
+            <field name="binding_model_id" ref="model_certificate_app"/>
+            <field name="binding_type">report</field>
+
+        </record>
+
+<!--        <record id="hms_report_log" model="ir.actions.report">-->
+<!--            <field name="name">Patient Details</field>-->
+<!--            <field name="model">log.history</field>-->
+<!--            <field name="report_type">qweb.pdf</field>-->
+<!--            <field name="report_name">iti.hms_patient_template</field>-->
+<!--            <field name="report_file">iti.hms_patient_template</field>-->
+<!--            <field name="binding_model_id" ref="model_hms_patient"/>-->
+<!--            <field name="binding_type">report</field>-->
+
+<!--        </record>-->
+    </data>
+
+
+</odoo>

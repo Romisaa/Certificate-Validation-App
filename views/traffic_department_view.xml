@@ -1,0 +1,43 @@
+<odoo>
+    <data>
+
+        <record id="view_traffic_department_tree" model="ir.ui.view">
+            <field name="name">traffic.department.tree</field>
+            <field name="model">traffic.department</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="department_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_traffic_department" model="ir.ui.view">
+            <field name="name">traffic.department.form</field>
+            <field name="model">traffic.department</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="department_name"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="traffic_department_action" model="ir.actions.act_window">
+            <field name="name">Traffic Departments</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">traffic.department</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_traffic_department"
+                  name="Traffic Departments"
+                  action="traffic_department_action"
+                  parent="menu_certificate_root"
+                  sequence="0"/>
+    </data>
+</odoo>

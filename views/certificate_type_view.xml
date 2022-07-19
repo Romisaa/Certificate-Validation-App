@@ -1,0 +1,71 @@
+<odoo>
+    <data>
+
+        <record id="view_certificate_type_tree" model="ir.ui.view">
+            <field name="name">certificate.type.tree</field>
+            <field name="model">certificate.type</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="types_name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_certificate_type" model="ir.ui.view">
+            <field name="name">certificate.type.form</field>
+            <field name="model">certificate.type</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="types_name"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="certificate_type_action" model="ir.actions.act_window">
+            <field name="name">Certificate Types</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">certificate.type</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_certificate_type"
+                  name="Certificates Type"
+                  action="certificate_type_action"
+                  parent="menu_certificate_root"
+                  sequence="0"/>
+
+        <!--        <menuitem id="menu_certificate_type_root"-->
+        <!--                  name="Certificate Types"-->
+        <!--                  sequence="0"/>-->
+
+        <!--        <menuitem id="menu_certificate_type_master"-->
+        <!--                  name="Certificate Type"-->
+        <!--                  parent="menu_certificate_type_root"-->
+        <!--                  sequence="0"/>-->
+
+        <!--        <menuitem id="menu_certificate_type"-->
+        <!--                  name="Certificatessss"-->
+        <!--                  action="certificate_type_action"-->
+        <!--                  parent="menu_certificate_type_root"-->
+        <!--                  sequence="0"/>-->
+
+        <!--        <menuitem id="menu_hms_master"-->
+        <!--                  name="Patient Details"-->
+        <!--                  parent="menu_hms_root"-->
+        <!--                  sequence="0"/>-->
+
+        <!--        <menuitem id="menu_patient"-->
+        <!--                  name="Departments"-->
+        <!--                  action="hms_department_action"-->
+        <!--                  parent="menu_department_root"-->
+        <!--                  sequence="0"/>-->
+
+
+    </data>
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="seq_certificates" model="ir.sequence">
+        <field name="name">Serial Number</field>
+        <field name="code">certificate.app</field>
+        <field name="prefix">TD</field>
+        <field name="padding">5</field>
+        <field name="company_id" eval="False"/>
+    </record>
+
+
+</odoo>
